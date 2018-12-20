@@ -8,7 +8,7 @@ export default class DecideOption extends Component{
   render() {
     return (
       <div>
-        <button onClick={this.props.handleClick}>Click Me</button>
+        <button className="buttons" onClick={this.props.handleClick}>{this.props.buttonText}</button>
       </div>
     )
   }
