@@ -1,6 +1,7 @@
 .events-prompt {
-  background-color: #9866ab;
-  padding: 30px;
+  margin-top: 40px;
+  background-color: #a4f27f;
+  padding: 100px;
 }
 
 .buttons {
@@ -19,4 +20,21 @@ body {
   min-width: 200px;
   min-height: 200px;
   padding: 20px;
+}
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(10px, 1s);
 }
