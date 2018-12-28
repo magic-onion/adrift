@@ -2,45 +2,43 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import EventsPrompt from './components/eventsprompt'
+import EventShow from './components/eventShow'
+import Animation from './components/animatedEvent'
+import TitleCard from './components/titleCard'
 import Controller from './components/controller'
 import Status from './components/status'
 import events from './data/events.js';
+import levels from './data/levels.js';
 
 
-// main components:
-  //events Prompt, controller, status
 class App extends Component {
   state = {
-    gameProgress: 0,
-    events: events
+    levels: [],
+    event: {}
   }
 
-  handleClick = (event) => {
-    let newProg = this.state.gameProgress + 1
-    if (this.state.gameProgress < 8) {
-      this.setState({
-        gameProgress: newProg
-      })
-    }
-    
+  // can you call render in componentDidMount?
+
+  componentDidMount() {
+    const event = levels[0]
+    this.setState({levels, event}, () => console.log(this.state))
   }
+
+  handleClick = (number) => {
+    let event = levels.find(e => e.id === number)
+    this.setState({event}, () => console.log(this.state.event.id))
+  }
+
 
   render() {
+    console.log(this.state.event)
     return (
-      <div className="App">
-        <EventsPrompt
-          events={this.state.events}
-          gameProgress={this.state.gameProgress}
-          handleClick={this.handleClick}
-          />
-        <Controller gameProgress={this.state.gameProgress} />
-        <Status gameProgress={this.state.gameProgress}/>
+      <div className="App ui centered divided grid">
+      {this.state.event.showAnimation ? <Animation event={this.state.event}/> : <TitleCard event={this.state.event} />}
+      <EventsPrompt event={this.state.event} handleClick={this.handleClick} />
       </div>
     );
   }
 }
 
 export default App;
-
-//
-//Everything loads into App. This should be replaced by 'Game' but doesn't have to be

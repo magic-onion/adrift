@@ -1,15 +1,11 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-export default class DecideOption extends Component{
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
+const DecideOption = ( { handleClick, buttonText } ) => {
     return (
-      <div>
-        <button className="buttons" onClick={this.props.handleClick}>{this.props.buttonText}</button>
+      <div className="ui three wide column">
+        <button className="buttons" onClick={handleClick}>{buttonText}</button>
       </div>
     )
-  }
 }
+
+export default DecideOption

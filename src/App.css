@@ -1,7 +1,22 @@
 .events-prompt {
-  background-color: orange;
+  background-color: #9866ab;
+  padding: 30px;
 }
 
 .buttons {
-  background-color: grey;
+  background-color: #e8e8e8;
+}
+
+.App {
+  background-color: #86868a;
+}
+
+body {
+  background-: grey;
+}
+
+.drawing {
+  min-width: 200px;
+  min-height: 200px;
+  padding: 20px;
 }

@@ -11,7 +11,7 @@ class Controller extends Component {
 
   render() {
     return (
-      <div style={{float: "left", marginLeft: "30px"}}>
+      <div className="ui four wide column">
         <button onClick={this.fishing}>Fish</button>
       </div>
     )

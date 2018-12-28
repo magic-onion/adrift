@@ -9,7 +9,7 @@ export default class Status extends Component {
 
   render() {
     return (
-      <div style={{float: "right", marginRight: "50px"}}>
+      <div className="ui four wide column">
       <p> What's the Status, Gladys?</p>
       <HealthBar />
       </div>
