@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import EventsPrompt1 from './components/eventsprompt1'
 import EventsPrompt2 from './components/eventsprompt2'
-import Animation from './components/animatedEvent'
-import TitleCard from './components/titleCard'
+import UserLogin from './components/UserLogin'
+import UserCreate from './components/UserCreate'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import levels from './data/levels.js';
 import events from './data/events.js'
@@ -31,7 +31,11 @@ class App extends Component {
   state = {
     levels: [],
     event: {},
-    show: false
+    show: false,
+    userInfo: {
+      username: '',
+      password: ''
+    }
   }
 
   componentDidMount() {
@@ -72,11 +76,31 @@ class App extends Component {
     }
   }
 
+  handleSubmit = event => {
+    event.preventDefault();
+    switch (event.target.id) {
+      case 'login':
+      console.log('login')
+      break;
+      case 'create':
+      console.log('create')
+      break;
+      default:
+      console.log('the default')
+    }
+  }
 
+  handleChange = event => {
+    let userInfo = {
+      [event.target.name]: event.target.value
+    }
+    this.setState({userInfo})
+  }
 
   render() {
     return (
       <div className="App ui centered divided grid">
+      <UserCreate handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
       <ReactCSSTransitionGroup
       transitionName="example"
       transitionAppear={true}
@@ -86,6 +110,7 @@ class App extends Component {
       transitionLeaveTimeout={1000}>
       {this.state.show ? <EventsPrompt1 event={this.state.event} handleClick={this.handleClick}/> : <EventsPrompt2 event={this.state.event} handleClick={this.handleClick}/>}
       </ReactCSSTransitionGroup>
+      <UserLogin handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
       </div>
     );
   }
