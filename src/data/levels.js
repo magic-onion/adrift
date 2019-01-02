@@ -1,5 +1,3 @@
-import React from 'react'
-
 const levels =
   [
     {
@@ -8,9 +6,9 @@ const levels =
       item: 'You wake up on the damp deck of a  boat. Your throat is dry. You have injuries.',
       title: "You are ADRIFT",
       button0: 1,
-      button1: 1,
+      button1: 900,
       button0Text: 'Are you Ok?',
-      button1Text: 'tree1 item1',
+      button1Text: 'Go Run a Marathon',
       showButton2: true,
       showAnimation: false,
     },
@@ -28,7 +26,7 @@ const levels =
     {
       name: 'investigatedBoat',
       id: 2,
-      item: 'The sai is broken. You are adrift. There is one large deck and stairs leading to a hold.',
+      item: 'The sail is broken. You are adrift. There is one large deck and stairs leading to a hold.',
       button0: 200,
       button1: 200,
       button0Text: 'Climb the sail and DIE',
@@ -1437,15 +1435,14 @@ const levels =
       showAnimation: false,
     },
     {
-      name: 'investigatedBoat',
-      id: 0,
-      item: 'YOU ARE ON Tree 4 item 3',
+      name: 'dehydration',
+      id: 900,
+      item: 'You try to take a step forward, but a dark ring surrounds your vision as you stumble. You are completely dehydrated. You collapse. No one will ever find your withered and crusted corpse.',
       button0: 0,
-      button1: 1,
-      button0Text: 'tree4 item3',
-      button1Text: 'tree4 item3',
-      showButton2: true,
-      showAnimation: false,
+      button1: 0,
+      button0Text: 'start over',
+      button1Text: 'start over',
+      showButton2: false
     }
   ]
 

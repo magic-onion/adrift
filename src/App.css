@@ -1,15 +1,20 @@
 .events-prompt {
+  min-width: 500px;
+  min-height: 350px;
   margin-top: 40px;
-  background-color: #a4f27f;
-  padding: 100px;
+  background-color: #5e9bb9;
+  padding: 50px;
 }
 
-.buttons {
-  background-color: #e8e8e8;
+.events-prompt,
+h2 {
+  font-family: 'Karla', sans-serif;
+  font-color: #0c542a;
 }
 
 .App {
-  background-color: #86868a;
+  background-color: #cccbcb;
+
 }
 
 body {
@@ -31,10 +36,47 @@ body {
   transition: opacity 1s ease-in;
 }
 
-.button:hover {background-color: #3e8e41}
+.example-leave {
+  opacity: 1;
+}
 
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(10px, 1s);
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 1s ease-in;
+}
+
+.button {
+
+    min-width: 200px;
+    min-height: 45px;
+    background-color: #d2d2d2;
+}
+
+.button:hover {
+  transition: background-color 1.5s ease;
+  background-color: #9e0606;
+  box-shadow: 2px 2px #666;
+  transform: translateY(10px, 0.7s);
+}
+
+.button-box {
+  min-height: 80px;
+  min-width: 200px;
+  margin: 30px;
+  display: inline-block;
+}
+
+.button,
+span {
+  font-family: 'Staatliches', sans-serif;
+  font-color: #0c542a;
+  font-size: 1.1em
+}
+
+.button,
+button {
+  border-radius: 3em;
+  font-family: 'Staatliches', sans-serif;
+  font-color: #0c542a;
+  font-size: 1.1em
 }

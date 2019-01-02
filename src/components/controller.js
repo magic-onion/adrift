@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 
 class Controller extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   fishing = () => {
     console.log('fishing')
