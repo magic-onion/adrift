@@ -4,6 +4,8 @@
   margin-top: 40px;
   background-color: #5e9bb9;
   padding: 50px;
+  border-radius: 10px;
+  border: 5px double #5d1309;
 }
 
 .events-prompt,

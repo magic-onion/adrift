@@ -6,7 +6,14 @@ import Animation from './components/animatedEvent'
 import TitleCard from './components/titleCard'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import levels from './data/levels.js';
+import events from './data/events.js'
 import crunching from './assets/crunching.mp3';
+import doggy from './assets/dog-bark.mp3';
+import losingMind from './assets/losing-mind.mp3';
+import monster from './assets/monster-growl.mp3';
+import dead from './assets/you-died.mp3';
+
+
 // import EventShow from './components/eventShow'
 // import events from './data/events.js';
 
@@ -14,9 +21,12 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.crunching = new Audio(crunching);
+    this.doggy = new Audio(doggy);
+    this.losingMind = new Audio(losingMind);
+    this.monster = new Audio(monster);
+    this.dead = new Audio(dead);
+
   }
-
-
 
   state = {
     levels: [],
@@ -32,12 +42,41 @@ class App extends Component {
   handleClick = (number) => {
     let show = !this.state.show
     let event = levels.find(e => e.id === number)
-    this.setState({event, show})
+    switch (number.toString()[0]) {
+      case "9":
+      event = events.find(e => e.id === number)
+      this.setState({event, show})
+      this.dead.play()
+      break;
+      default:
+      switch (number) {
+        case 238:
+        this.setState({event, show})
+        this.doggy.play()
+        break;
+        case 225:
+        this.monster.play()
+        this.setState({event, show})
+        break;
+        case 308:
+        this.losingMind.play()
+        this.setState({event, show})
+        break;
+        case 313:
+        this.losingMind.play()
+        this.setState({event, show})
+        break;
+        default:
+        this.setState({event, show})
+      }
+    }
   }
+
+
+
   render() {
     return (
       <div className="App ui centered divided grid">
-      {this.state.event.showAnimation ? <Animation event={this.state.event}/> : <TitleCard event={this.state.event} />}
       <ReactCSSTransitionGroup
       transitionName="example"
       transitionAppear={true}
@@ -53,3 +92,7 @@ class App extends Component {
 }
 
 export default App;
+
+
+
+// {this.state.event.showAnimation ? <Animation event={this.state.event}/> : <TitleCard event={this.state.event} />}
