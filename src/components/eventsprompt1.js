@@ -3,6 +3,7 @@ import DecideOption from './decideoption'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class EventsPrompt extends React.Component {
+
   render() {
     const {props: {event: {item, button0, button1, button0Text, button1Text, showButton2}, handleClick}} = this
     return (

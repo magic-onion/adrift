@@ -83,12 +83,78 @@ button {
   font-size: 1.1em
 }
 
+
+.login-toggle {
+  display: inline-block;
+  padding: 10px;
+  margin: 3px;
+  border: 1px solid #246ca4;
+}
+
+.toggle-yes {
+  border-radius: 3px;
+  background-color: #e8481b;
+  display: inline-block;
+  padding: 10px;
+  margin: 8px;
+  margin-right: 5px;
+  border: 2px solid #e8481b;
+}
+
+.toggle-no {
+  border-radius: 3px;
+  display: inline-block;
+  padding: 10px;
+  margin: 8px;
+  margin-right: 5px;
+  border: 2px solid #6b739c;
+}
+
 .form-styling {
-  padding-top: 20px;
-  margin-top: 10px;
-  background-color: #65ad2d;
-  border: 2px dotted #52110d;
-  border-radius: 2px;
+  padding-top: 10px;
+  margin-right: 8px;
+  margin-left: 6px;
+  margin-top: 4px;
+  background-color: #2b9d3d;
+  border-radius: 5px;
   min-width: 150px;
   min-height: 80px;
+}
+
+.first-form {
+  font-family: 'Karla', sans-serif;
+  text-align: center;
+  border-radius: 5px;
+  display: inline-block;
+  margin-left: 30%;
+  padding-top: 25px;
+  margin-top: 100px;
+  border: 4px groove #52110d;
+  background-color: #2b9d3d;
+  max-height: 500px;
+}
+
+.login-inputs {
+  margin-left: 8px;
+}
+
+.login-submit,
+  button {
+    border-radius: 2px;
+    margin: 10px;
+    padding: 5px;
+    font-family: 'Staatliches', sans-serif;
+    font-color: #0c542a;
+  }
+  .login-submit:hover {
+      transition: background-color 1.5s ease;
+      background-color: #9e0606;
+      box-shadow: 2px 2px #666;
+      transform: translateY(10px, 0.7s);
+    }
+
+.save-load {
+  position: fixed;
+  margin-top: 500px;
+  float: right;
 }
