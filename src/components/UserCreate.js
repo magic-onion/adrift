@@ -3,7 +3,6 @@ import React from 'react'
 class UserCreate extends React.Component {
 
   componentDidMount() {
-    console.log('mounting before fetch')
     fetch(`http://localhost:3000/api/v1/users`).then(r=>r.json()).then(p=> this.props.getUsers(p))
   }
 

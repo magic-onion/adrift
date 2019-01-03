@@ -189,7 +189,7 @@ class App extends Component {
 
   getUsers = array => {
     let users = array
-    this.setState({users}, () => console.log(this.state.users))
+    this.setState({users})
   }
 
 
