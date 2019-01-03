@@ -16,9 +16,9 @@ class EventsPrompt2 extends React.Component {
       transitionLeave={true}
       transitionLeaveTimeout={1000}>
         <div className="events-prompt">
-        <h2>{item}</h2>
-        <DecideOption className="buttons" buttonText={button0Text} handleClick={() => handleClick(button0)}/>
-        {showButton2 ? <DecideOption className="buttons" buttonText={button1Text} handleClick={() => handleClick(button1)}/> : null}
+          <h2>{item}</h2>
+          <DecideOption className="buttons" buttonText={button0Text} handleClick={() => handleClick(button0)}/>
+          {showButton2 ? <DecideOption className="buttons" buttonText={button1Text} handleClick={() => handleClick(button1)}/> : null}
         </div>
       </ ReactCSSTransitionGroup>
     )

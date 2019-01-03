@@ -8,12 +8,10 @@ import ErrorLog from './components/errorLog'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import levels from './data/levels.js';
 import events from './data/events.js'
-import crunching from './assets/crunching.mp3';
 import doggy from './assets/dog-bark.mp3';
 import losingMind from './assets/losing-mind.mp3';
 import monster from './assets/monster-growl.mp3';
 import dead from './assets/you-died.mp3';
-import begin from './assets/begin.mp3'
 
 const init = {
   levels: [],
@@ -32,13 +30,10 @@ const init = {
 class App extends Component {
   constructor(props) {
     super(props)
-    this.begin = new Audio(begin)
-    this.crunching = new Audio(crunching);
     this.doggy = new Audio(doggy);
     this.losingMind = new Audio(losingMind);
     this.monster = new Audio(monster);
     this.dead = new Audio(dead);
-
   }
 
   state = init
@@ -48,7 +43,6 @@ class App extends Component {
     const currentUserId = 0
     this.setState({event, currentUserId})
   }
-
 
   handleUsernameChange = event => {
     let username = event.target.value
@@ -87,7 +81,7 @@ class App extends Component {
       case 'create':
       let newUser = {username: this.state.username, password: this.state.password}
       if (this.state.users.filter(user => user.username=== newUser.username).length) {
-        let error = "User already exists"; this.setState({error}, ()=>console.log(this.state.error))
+        let error = "User already exists"; this.setState({error})
         return
       }
       else {
@@ -99,11 +93,11 @@ class App extends Component {
           body: JSON.stringify(newUser)
         }).then(r=>r.json()).then(p => {
           let currentUserId = p.id
-          this.setState({currentUserId}, () => console.log(this.state.currentUserId))
+          this.setState({currentUserId})
         })
       }
       default:
-      console.log('the default')
+      return
     }
   }
 
@@ -113,14 +107,13 @@ class App extends Component {
     }
     else if (event.target.id !== this.state.formCreates && this.state.formCreates === 'create' ) {
       let formCreates = 'login'
-      this.setState({formCreates}, ()=>console.log(this.state.formCreates))
+      this.setState({formCreates})
     }
     else if (event.target.id !== this.state.formCreates && this.state.formCreates === 'login' ) {
       let formCreates = 'create'
-      this.setState({formCreates}, ()=>console.log(this.state.formCreates))
+      this.setState({formCreates})
     }
   }
-
 
   handleClick = (number) => {
     let show = !this.state.show
@@ -155,7 +148,6 @@ class App extends Component {
     }
   }
 
-
   saveGame = () => {
     let newGame = {
       event: this.state.event.id,
@@ -182,16 +174,10 @@ class App extends Component {
         body: JSON.stringify(newGame)
       }).then(r=>r.json()).then(p => {
         let currentGame = p
-        this.setState({currentGame}, ()=> console.log(this.state.currentGame.event))
+        this.setState({currentGame})
       })
     }
   }
-
-  getUsers = array => {
-    let users = array
-    this.setState({users})
-  }
-
 
   loadGame = event => {
     let newEvent = levels.find(level=>level.id === this.state.currentGame.event)
@@ -204,14 +190,19 @@ class App extends Component {
     }
   }
 
+  logOut = event => {
+    this.setState(init)
+  }
+
+  getUsers = array => {
+    let users = array
+    this.setState({users})
+  }
+
   getCurrentGame = obj => {
     this.setState({
       currentGame: obj
-    }, ()=> console.log(this.state.currentGame))
-  }
-
-  logOut = event => {
-    this.setState(init)
+    })
   }
 
   get toggled(){
@@ -248,7 +239,6 @@ class App extends Component {
     )
     }
   }
-
 
   render() {
     return this.isLoggedIn()
