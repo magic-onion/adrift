@@ -13,6 +13,7 @@ import doggy from './assets/dog-bark.mp3';
 import losingMind from './assets/losing-mind.mp3';
 import monster from './assets/monster-growl.mp3';
 import dead from './assets/you-died.mp3';
+import begin from './assets/begin.mp3'
 
 const init = {
   levels: [],
@@ -31,6 +32,7 @@ const init = {
 class App extends Component {
   constructor(props) {
     super(props)
+    this.begin = new Audio(begin)
     this.crunching = new Audio(crunching);
     this.doggy = new Audio(doggy);
     this.losingMind = new Audio(losingMind);
@@ -68,15 +70,18 @@ class App extends Component {
           this.setState({currentUser, currentUserId})
           fetch(`http://localhost:3000/api/v1/users/${this.state.currentUserId}/games`).then(r=>r.json()).then(p => {
             let currentGame = p.find(game=>game.user_id === this.state.currentUserId)
-            console.log(currentGame.event)
-            this.setState({currentGame})
+            if (currentGame) {
+              this.setState({currentGame}, ()=>this.loadGame())
+            }
+            else {
+              this.saveGame()
+            }
           })
         }
         else {
           let error = "Wrong Info."
           this.setState({error})
         }
-
       break;
 
       case 'create':
@@ -190,7 +195,13 @@ class App extends Component {
 
   loadGame = event => {
     let newEvent = levels.find(level=>level.id === this.state.currentGame.event)
-    this.setState({event: newEvent}, () => console.log(this.state.event))
+    if (newEvent){
+      this.setState({event: newEvent})
+    }
+    else {
+      newEvent = events.find( level=>level.id === this.state.currentGame.event)
+      this.setState({event: newEvent})
+    }
   }
 
   getCurrentGame = obj => {

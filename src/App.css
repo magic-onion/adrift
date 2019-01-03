@@ -1,7 +1,7 @@
 .events-prompt {
   min-width: 500px;
   min-height: 350px;
-  margin-top: 40px;
+  margin-top: 160px;
   background-color: #5e9bb9;
   padding: 50px;
   border-radius: 10px;
@@ -83,11 +83,15 @@ button {
   font-size: 1.1em
 }
 
+.login {
+  float: left;
+  padding-bottom: 20px;
+}
+
 
 .login-toggle {
   display: inline-block;
   padding: 10px;
-  margin: 3px;
   border: 1px solid #246ca4;
 }
 
@@ -126,8 +130,11 @@ button {
   text-align: center;
   border-radius: 5px;
   display: inline-block;
-  margin-left: 32em;
+  margin-left: 42em;
   padding-top: 25px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-top: 100px;
   border: 4px groove #52110d;
   background-color: #5e9bb9;
@@ -136,7 +143,7 @@ button {
 
 .login-inputs {
   font-family: 'Karla', sans-serif;
-  margin-left: 8px;
+  margin-left: 6px;
   border-radius: 2px;
   border: 2px ridge #939c87;
     -webkit-box-shadow:
@@ -170,7 +177,7 @@ button {
 
 .save-load {
   position: fixed;
-  margin-top: 500px;
+  margin-top: 600px;
   float: right;
 }
 .save-load button {
@@ -198,7 +205,7 @@ button {
   border-radius: 2px;
   padding: 30px;
   display: inline-block;
-  margin-left: 44em;
+  margin-left: 49.5em;
   margin-top: 100px;
   border: 4px groove #52110d;
   background-color: #5e9bb9;
