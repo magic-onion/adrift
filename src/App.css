@@ -1,9 +1,9 @@
 .events-prompt {
   min-width: 500px;
-  min-height: 350px;
-  margin-top: 160px;
+  min-height: 150px;
+  margin-top: 180px;
   background-color: #5e9bb9;
-  padding: 50px;
+  padding: 40px;
   border-radius: 10px;
   border: 5px double #5d1309;
 }
@@ -91,7 +91,9 @@ button {
 
 .login-toggle {
   display: inline-block;
-  padding: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: 1px solid #246ca4;
 }
 

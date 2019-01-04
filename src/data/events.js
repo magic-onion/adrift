@@ -101,7 +101,7 @@ const events = [
   {
     name: `Visit the Deck`,
     id: 909,
-    item: `You travel to the deck to look at the thing that has been tormenting you. As your foot touches the last stair going up, you are surrounded by those translucent eels. You realize they are tentacles.`,
+    item: `You travel to the deck, and come face to face with the thing that has been tormenting you. As your foot touches the last stair going up, you are surrounded by those translucent eels. You realize they are tentacles. They squeeze the life out of you.`,
     button0: 910,
     button1: 0,
     button0Text: 'continue',
@@ -112,7 +112,7 @@ const events = [
   {
     name: `It killed you`,
     id: 910,
-    item: `You feel the slimy, watery texture of the tentcales all over you as they being to constrict your breathing. Somehow you open your eyes and look through the watery appendages. You see endless, ethereal faces moaning and screaming. The lost souls fill the thing and beg for your help as your last cry joins their collective agony.`,
+    item: `You feel the slimy, watery texture of the tentacles all over you as they being to constrict your breathing. Somehow you open your eyes and look through the watery appendages. You see endless, ethereal faces moaning and screaming. The lost souls fill the thing and beg for your help as your last cry joins their collective agony.`,
     button0: 0,
     button1: 0,
     button0Text: 'start over',
@@ -189,7 +189,7 @@ const events = [
   {
     name: `Suddenly Killed`,
     id: 917,
-    item: ``,
+    item: `A gooey, translucent tentacle covers your face entirely. It wraps around your face, strangling you while you fight for your last breath.`,
     button0: 0,
     button1: 0,
     button0Text: 'start over',
@@ -201,6 +201,17 @@ const events = [
     name: `snapped your own neck`,
     id: 918,
     item: `In one last act of will, you find the strength to place your hands at the sides of your face and snap your own neck. At least it was your choice.`,
+    button0: 0,
+    button1: 0,
+    button0Text: 'start over',
+    button1Text: 'start over',
+    showButton2: false,
+    showAnimation: false
+  },
+  {
+    name: `Kill The Dog`,
+    id: 919,
+    item: `You take the crowbar from the hold. Your new friend follows behind you with her tail between her leg. You raise your weapon with violent intent. Before you can act, you spontaneously combust. You burn alive for days, somehow surviving in terrible pain. When you are finally reduced to ashes, your entire bloodline is cursed with smelly feet for the next thousand generations.`,
     button0: 0,
     button1: 0,
     button0Text: 'start over',

@@ -71,7 +71,7 @@ const levels =
     {
       name: 'Which crate',
       id: 203,
-      item: `The first crate is clasped shut with heavy chains a serious looking lock. You realize you probably cannot open it without a key. The other two look as if they can be opened with a crowbar. Which do you open.`,
+      item: `The first crate is clasped shut with heavy chains a serious looking lock. You realize you probably cannot open it without a key. The other two look as if they can be opened with a crowbar. Which do you open?`,
       button0: 204,
       button1: 204,
       button0Text: 'Open the first crate',
@@ -93,7 +93,7 @@ const levels =
     {
       name: `Eating Sausage`,
       id: 205,
-      item: `You grab some dried sausage and wonder how you got here. The food is hearty. You drift to sleep..`,
+      item: `You grab some dried sausage and wonder how you got here. The food is hearty. You drift to sleep.`,
       button0: 206,
       button1: 206,
       button0Text: 'Rest',
@@ -104,7 +104,7 @@ const levels =
     {
       name: `Waking Up`,
       id: 206,
-      item: `You wake in the damp, musty hold. You feel somewhat refreshed. You look around, and realize you have not opened the second crat.`,
+      item: `You wake in the damp, musty hold. You feel somewhat refreshed. You look around, and realize you have not opened the second crate.`,
       button0: 207,
       button1: 301,
       button0Text: 'Open the second crate',
@@ -115,10 +115,10 @@ const levels =
     {
       name: 'Open the second crate',
       id: 207,
-      item: `You open the second crate after much less effort than the first one, and find a sail and shipbuilding materials! You can now repair your newfound vesse.`,
+      item: `You open the second crate after much less effort than the first one, and find a sail and shipbuilding materials! You can now repair your newfound vessel.`,
       button0: 208,
       button1: 209,
-      button0Text: 'go to the deck and check things out',
+      button0Text: 'see what can be done',
       button1Text: 'nothing',
       showButton2: false,
       showAnimation: false
@@ -151,7 +151,7 @@ const levels =
       item: `You take the sail and other materials from the hold and are able to repair the sail. You aren't sure what you're doing, but your hands seem to know. You can now navigate your ship, but there is nothing to navigate to except endless waters.`,
       button0: 304,
       button1: 211,
-      button0Text: `ponder your existenc.`,
+      button0Text: `ponder your existence`,
       button1Text: 'search the hold again',
       showButton2: true,
       showAnimation: false
@@ -159,7 +159,7 @@ const levels =
     {
       name: 'Open a crate',
       id: 211,
-      item: `The light from above speckles into the hold. You have been trying to avoid the corpse in the corner, but something around his neck catches your ey.`,
+      item: `The light from above speckles into the hold. You have been trying to avoid the corpse in the corner, but something around his neck catches your eye.`,
       button0: 212,
       button1: 307,
       button0Text: 'Check the corpse again',
@@ -192,7 +192,7 @@ const levels =
     {
       name: 'third crate',
       id: 214,
-      item: `Inside the third crate is a bundle of hay, nestled carefully is a spyglass, a compass, and a ma.`,
+      item: `Inside the third crate is a bundle of hay, nestled carefully is a spyglass, a compass, and a map.`,
       button0: 215,
       button1: 216,
       button0Text: 'Look at the map',
@@ -227,7 +227,7 @@ const levels =
       id: 217,
       item: `The compass points south. You have no bearings or landmarks to work off of. You must look outside.`,
       button0: 218,
-      button1: 999,
+      button1: 310,
       button0Text: 'Use the spyglass outside',
       button1Text: 'Check the corpse again',
       showButton2: true,
@@ -258,7 +258,7 @@ const levels =
     {
       name: 'change course',
       id: 220,
-      item: `You change your heading. You have a goal now, but what will it bring.`,
+      item: `You change your heading. You have a goal now, but what will it bring?`,
       button0: 221,
       button1: 241,
       button0Text: 'Maintain heading',
@@ -269,7 +269,7 @@ const levels =
     {
       name: 'Maintain Heading',
       id: 221,
-      item: `You dilligently check the compass, your spyglass and the sail to ensure you maintain course. Oddly, the light breeze allows you to move effortlessly toward the speck as it becomes visible to the naked eye.`,
+      item: `You dilligently check the compass, the spyglass, and the sail to ensure you maintain course. Oddly, the light breeze allows you to move effortlessly toward the speck as it becomes visible to the naked eye.`,
       button0: 222,
       button1: 999,
       button0Text: 'Continue',
@@ -280,10 +280,10 @@ const levels =
     {
       name: 'Monster Encounter 2',
       id: 222,
-      item: `You begin to almost feel pleasant as you sail. It occurs to you to be worried about your predicament, but those doubtful thoughts don't occur to you. As you focus away from the growing mass, something in your periphery catches your attention.`,
+      item: `You begin to almost feel pleasant as you sail. It occurs to you to be worried about your predicament, but those doubtful thoughts are quickly ignored. Suddenly, your focus is drawn to something in your periphery.`,
       button0: 223,
       button1: 242,
-      button0Text: 'Try to ignore it.',
+      button0Text: 'Try to ignore it',
       button1Text: 'Turn and look',
       showButton2: true,
       showAnimation: false
@@ -335,7 +335,7 @@ const levels =
     {
       name: '',
       id: 227,
-      item: `You clean up some of that.. thing's goo off your face and hope you haven't been poisoned with some thing-neurotoxin. Curiously, you are calm. You consider the fact that you are truly lost.`,
+      item: `You clean up some of the goo off your face and hope you haven't been poisoned with a neurotoxin. Curiously, you are calm. You consider the fact that you are truly lost.`,
       button0: 229,
       button1: 228,
       button0Text: 'check boat for damage',
@@ -368,7 +368,7 @@ const levels =
     {
       name: '',
       id: 230,
-      item: `You clean up your face, and press your goo-free visage to the spyglass. The black speck now appears to be a mass of wreckage. The wind has also picked up. You are traveling faster now.`,
+      item: `You finish up cleaning your face, and press your goo-free visage to the spyglass. The black speck now appears to be a mass of wreckage. The wind has also picked up. You are traveling faster now.`,
       button0: 231,
       button1: 311,
       button0Text: 'observe the mass',
@@ -390,7 +390,7 @@ const levels =
     {
       name: '',
       id: 232,
-      item: 'You can see the sun going down over the horizon to the West. As the light grows dim, so does the wind. Thought you are close to your quarry, with only endless water surrounding you, you realize you are no longer traveling forward',
+      item: 'You can see the sun going down over the horizon to the West. As the light grows dim, so does the wind. Though you are close to your quarry, with only endless water surrounding you, you realize you are no longer traveling forward',
       button0: 233,
       button1: 999,
       button0Text: 'get some rest',
@@ -401,7 +401,7 @@ const levels =
     {
       name: '',
       id: 233,
-      item: `After eating more dried sausage and drinking some water, your eyelids become heav.`,
+      item: `After eating more dried sausage and drinking some water, your eyelids become heavy.`,
       button0: 234,
       button1: 312,
       button0Text: 'sleep',
@@ -412,7 +412,7 @@ const levels =
     {
       name: '',
       id: 234,
-      item: `You dream of wrestling a toothless crocodile in a kiddie pool full of jello while someone pours bucket after bucket of adult pythons on yo.`,
+      item: `You dream of wrestling a toothless crocodile in a kiddie pool full of jello while someone pours bucket after bucket of adult pythons on you.`,
       button0: 312,
       button1: 235,
       button0Text: 'linger on your dream',
@@ -459,9 +459,9 @@ const levels =
       item: `The dog is wet, and eats a sausage hungrily. She is happy to be found. As soon as she shakes the water off, she looks at you and begins barking off the side of the ship.`,
       button0: 239,
       button1: 999,
-      button0Text: 'Look towards her barking',
+      button0Text: 'Look',
       button1Text: 'button1',
-      showButton2: true,
+      showButton2: false,
       showAnimation: false
     },
     {
@@ -469,9 +469,9 @@ const levels =
       id: 239,
       item: `You stand next to her and take a look at the water, but there is only calm. She nudges your hand with her nose. It is the hand with the spyglass. You take a a look. You see land.`,
       button0: 240,
-      button1: 999,
-      button0Text: 'continue',
-      button1Text: 'button1',
+      button1: 919,
+      button0Text: 'change course',
+      button1Text: 'kill the dog',
       showButton2: true,
       showAnimation: false
     },
@@ -514,7 +514,7 @@ const levels =
       item: `You are a huge jerk.`,
       button0: 236,
       button1: 0,
-      button0Text: `Don't do that agai.`,
+      button0Text: `Don't do that again.`,
       button1Text: 'start over',
       showButton2: true,
       showAnimation: false
@@ -577,7 +577,7 @@ const levels =
     {
       name: 'Grabbing a Weapon',
       id: 305,
-      item: `You reach for the first thing you can find, the crowbar. You sit back down and clutch it to your chest. From across the hold, you see the skeleton of the last inhabitant of this ship.`,
+      item: `Operating on instinct, you reach for the first thing you can find, the crowbar. You sit back down and clutch it to your chest, feeling secure. From across the hold, you see the skeleton of the last inhabitant of this ship.`,
       button0: 307,
       button1: 911,
       button0Text: 'Smash the skeleton',
@@ -588,7 +588,7 @@ const levels =
     {
       name: 'Keep Pacing',
       id: 306,
-      item: `You reach for the first thing you can find, the crowbar. You sit back down and clutch it to your chest. From across the hold, you see the skeleton of the last inhabitant of this ship.`,
+      item: `Operating on instinct, you reach for the first thing you can find, the crowbar. You sit back down and clutch it to your chest, feeling secure. From across the hold, you see the skeleton of the last inhabitant of this ship.`,
       button0: 307,
       button1: 911,
       button0Text: 'Smash the skeleton',
@@ -599,7 +599,7 @@ const levels =
     {
       name: 'Smash the Corpse',
       id: 307,
-      item: `In a vain attempt at control, you destroy the thing you fear becoming. In a flurry of swipes, you notice a notebook fly from the corpse's shirt pocke.`,
+      item: `In a vain attempt at control, you destroy the thing you fear becoming. In a flurry of swipes, you notice a notebook fly from the corpse's shirt pocket.`,
       button0: 308,
       button1: 911,
       button0Text: 'Read the Book',
@@ -643,12 +643,12 @@ const levels =
     {
       name: 'Stay awake all night',
       id: 312,
-      item: `Memories of tentacles and laughing skeletons haunt you as you stay awake. You begin to hallucinated faces you have never seen, and see strange shapes and symbols materialize in the air. Is the food okay to eat.`,
+      item: `Memories of tentacles and laughing skeletons haunt you as you stay awake. You begin to hallucinate faces you have never seen, and see strange shapes and symbols materialize in the air. Is the food okay to eat?`,
       button0: 914,
       button1: 911,
       button0Text: 'Throw out the food',
       button1Text: 'What are these symbols?',
-      showButton2: false,
+      showButton2: true,
       showAnimation: false
     },
     {

@@ -12,6 +12,8 @@ import doggy from './assets/dog-bark.mp3';
 import losingMind from './assets/losing-mind.mp3';
 import monster from './assets/monster-growl.mp3';
 import dead from './assets/you-died.mp3';
+import win from './assets/win.mp3';
+
 
 const init = {
   levels: [],
@@ -34,6 +36,7 @@ class App extends Component {
     this.losingMind = new Audio(losingMind);
     this.monster = new Audio(monster);
     this.dead = new Audio(dead);
+    this.win = new Audio(win)
   }
 
   state = init
@@ -126,6 +129,14 @@ class App extends Component {
       break;
       default:
       switch (number) {
+        case 240:
+        this.win.play()
+        this.setState({event, show})
+        break;
+        case 208:
+        this.monster.play()
+        this.setState({event, show})
+        break;
         case 238:
         this.setState({event, show})
         this.doggy.play()
