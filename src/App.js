@@ -3,8 +3,6 @@ import './App.css';
 import EventsPrompt1 from './components/eventsprompt1'
 import EventsPrompt2 from './components/eventsprompt2'
 import SaveLoad from './components/saveLoad'
-import UserCreate from './components/UserCreate'
-import ErrorLog from './components/errorLog'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import levels from './data/levels.js';
 import events from './data/events.js'
@@ -13,14 +11,14 @@ import losingMind from './assets/losing-mind.mp3';
 import monster from './assets/monster-growl.mp3';
 import dead from './assets/you-died.mp3';
 import win from './assets/win.mp3';
+// import UserCreate from './components/UserCreate'
+// import ErrorLog from './components/errorLog'
 
 
 const init = {
   levels: [],
   event: {},
   show: false,
-  username: '',
-  password: '',
   users: [],
   currentUser: {},
   currentUserId: 0,
@@ -42,67 +40,15 @@ class App extends Component {
   state = init
 
   componentDidMount() {
+    if (localStorage.getItem('save')) {
+      let event = levels[localStorage.getItem('save')]
+      return
+    }
     const event = levels[0]
     const currentUserId = 0
     this.setState({event, currentUserId})
   }
 
-  handleUsernameChange = event => {
-    let username = event.target.value
-    this.setState({username})
-  }
-
-  handlePasswordChange = event => {
-    let password = event.target.value
-    this.setState({password})
-  }
-
-  handleSubmit = event => {
-    event.preventDefault();
-    switch (this.state.formCreates) {
-      case 'login':
-        let currentUser = this.state.users.find(user => user.username === this.state.username && user.password === this.state.password)
-        if (currentUser) {
-          let currentUserId = currentUser.id
-          this.setState({currentUser, currentUserId})
-          fetch(`http://localhost:3000/api/v1/users/${this.state.currentUserId}/games`).then(r=>r.json()).then(p => {
-            let currentGame = p.find(game=>game.user_id === this.state.currentUserId)
-            if (currentGame) {
-              this.setState({currentGame}, ()=>this.loadGame())
-            }
-            else {
-              this.saveGame()
-            }
-          })
-        }
-        else {
-          let error = "Wrong Info."
-          this.setState({error})
-        }
-      break;
-
-      case 'create':
-      let newUser = {username: this.state.username, password: this.state.password}
-      if (this.state.users.filter(user => user.username=== newUser.username).length) {
-        let error = "User already exists"; this.setState({error})
-        return
-      }
-      else {
-        return fetch('http://localhost:3000/api/v1/users', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(newUser)
-        }).then(r=>r.json()).then(p => {
-          let currentUserId = p.id
-          this.setState({currentUserId})
-        })
-      }
-      default:
-      return
-    }
-  }
 
   handleToggleClick = event => {
     if (event.target.id === this.state.formCreates) {
@@ -224,36 +170,71 @@ class App extends Component {
     return this.state.formCreates === 'login' ? "toggle-yes" : "toggle-no"
   }
 
-  isLoggedIn = () => {
-    if (this.state.currentUserId) {
-      return (
-        <div className="App ui centered divided grid">
-        <ReactCSSTransitionGroup
-        transitionName="example"
-        transitionAppear={true}
-        transitionAppearTimeout={1000}
-        transitionEnter={false}
-        transitionLeave={true}
-        transitionLeaveTimeout={1000}>
-        {this.state.show ? <EventsPrompt1 event={this.state.event} handleClick={this.handleClick}/> : <EventsPrompt2 event={this.state.event} handleClick={this.handleClick} currentUserId={this.state.currentUserId} getCurrentGame={this.getCurrentGame}/>}
-        </ReactCSSTransitionGroup>
-        <SaveLoad saveGame={this.saveGame} loadGame={this.loadGame} logOut={this.logOut}/>
-        </div>
-      )
-    }
-    else {
-      return (
-        <div>
-      <UserCreate handleSubmit={this.handleSubmit} handleUsernameChange={this.handleUsernameChange} handlePasswordChange={this.handlePasswordChange} handleToggleClick={this.handleToggleClick} toggled={this.toggled} toggled2={this.toggled2} getUsers={this.getUsers}/>
-      {this.state.error.length > 0 ? <ErrorLog error={this.state.error}/> : null}
-        </div>
-    )
-    }
-  }
-
   render() {
-    return this.isLoggedIn()
+    return (
+      <div className="App ui centered divided grid">
+      <ReactCSSTransitionGroup
+      transitionName="example"
+      transitionAppear={true}
+      transitionAppearTimeout={1000}
+      transitionEnter={false}
+      transitionLeave={true}
+      transitionLeaveTimeout={1000}>
+      {this.state.show ? <EventsPrompt1 event={this.state.event} handleClick={this.handleClick}/> : <EventsPrompt2 event={this.state.event} handleClick={this.handleClick} currentUserId={this.state.currentUserId} getCurrentGame={this.getCurrentGame}/>}
+      </ReactCSSTransitionGroup>
+      <SaveLoad saveGame={this.saveGame} loadGame={this.loadGame} logOut={this.logOut}/>
+      </div>
+    )
   }
 }
 
 export default App;
+
+
+
+// handleSubmit = event => {
+  //   event.preventDefault();
+  //   switch (this.state.formCreates) {
+    //     case 'login':
+    //       let currentUser = this.state.users.find(user => user.username === this.state.username && user.password === this.state.password)
+    //       if (currentUser) {
+      //         let currentUserId = currentUser.id
+      //         this.setState({currentUser, currentUserId})
+      //         fetch(`http://localhost:3000/api/v1/users/${this.state.currentUserId}/games`).then(r=>r.json()).then(p => {
+        //           let currentGame = p.find(game=>game.user_id === this.state.currentUserId)
+        //           if (currentGame) {
+          //             this.setState({currentGame}, ()=>this.loadGame())
+          //           }
+          //           else {
+            //             this.saveGame()
+            //           }
+            //         })
+            //       }
+            //       else {
+              //         let error = "Wrong Info."
+              //         this.setState({error})
+              //       }
+              //     break;
+              //
+              //     case 'create':
+              //     let newUser = {username: this.state.username, password: this.state.password}
+              //     if (this.state.users.filter(user => user.username=== newUser.username).length) {
+                //       let error = "User already exists"; this.setState({error})
+                //       return
+                //     }
+                //     else {
+                  //       return fetch('http://localhost:3000/api/v1/users', {
+                    //         method: 'POST',
+                    //         headers: {
+                      //           'Content-Type': 'application/json'
+                      //         },
+                      //         body: JSON.stringify(newUser)
+                      //       }).then(r=>r.json()).then(p => {
+                        //         let currentUserId = p.id
+                        //         this.setState({currentUserId})
+                        //       })
+                        //     }
+                        //     default:
+                        //     return
+                        //   }
+                        // }

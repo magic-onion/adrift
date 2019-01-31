@@ -1,3 +1,4 @@
+//No longer using auth
 import React from 'react'
 
 const ErrorLog = props => {

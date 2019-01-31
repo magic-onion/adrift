@@ -97,24 +97,6 @@ button {
   border: 1px solid #246ca4;
 }
 
-.toggle-yes {
-  border-radius: 3px;
-  background-color: #e8481b;
-  display: inline-block;
-  padding: 10px;
-  margin: 8px;
-  margin-right: 5px;
-  border: 2px solid #e8481b;
-}
-
-.toggle-no {
-  border-radius: 3px;
-  display: inline-block;
-  padding: 10px;
-  margin: 8px;
-  margin-right: 5px;
-  border: 2px solid #6b739c;
-}
 
 .form-styling {
   padding-top: 10px;
@@ -143,47 +125,16 @@ button {
   max-height: 500px;
 }
 
-.login-inputs {
-  font-family: 'Karla', sans-serif;
-  margin-left: 6px;
-  border-radius: 2px;
-  border: 2px ridge #939c87;
-    -webkit-box-shadow:
-      inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1);
-    -moz-box-shadow:
-      inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1);
-    box-shadow:
-      inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1);
-    padding: 5px;
-    background: rgba(255,255,255,0.5);
-}
-
-.login-submit,
-  button {
-    border-radius: 2px;
-    margin: 10px;
-    padding: 5px;
-    font-family: 'Staatliches', sans-serif;
-    background-color: #d2d2d2;
-    font-color: #0c542a;
-  }
-  .login-submit:hover {
-      transition: background-color 1.5s ease;
-      background-color: #9e0606;
-      box-shadow: 2px 2px #666;
-      transform: translateY(10px, 0.7s);
-    }
 
 .save-load {
   position: fixed;
-  margin-top: 600px;
+  margin-top: 550px;
   float: right;
+
 }
 .save-load button {
   border-radius: 5px;
+  margin: 20px;
   border: 2px solid #3a3b3a;
   background-color: #5e9bb9;
 }
@@ -213,3 +164,59 @@ button {
   background-color: #5e9bb9;
   max-height: 500px;
 }
+
+
+
+/* .toggle-yes {
+border-radius: 3px;
+background-color: #e8481b;
+display: inline-block;
+padding: 10px;
+margin: 8px;
+margin-right: 5px;
+border: 2px solid #e8481b;
+}
+
+.toggle-no {
+border-radius: 3px;
+display: inline-block;
+padding: 10px;
+margin: 8px;
+margin-right: 5px;
+border: 2px solid #6b739c;
+} */
+
+
+/* .login-inputs {
+font-family: 'Karla', sans-serif;
+margin-left: 6px;
+border-radius: 2px;
+border: 2px ridge #939c87;
+-webkit-box-shadow:
+inset 0 0 8px  rgba(0,0,0,0.1),
+0 0 16px rgba(0,0,0,0.1);
+-moz-box-shadow:
+inset 0 0 8px  rgba(0,0,0,0.1),
+0 0 16px rgba(0,0,0,0.1);
+box-shadow:
+inset 0 0 8px  rgba(0,0,0,0.1),
+0 0 16px rgba(0,0,0,0.1);
+padding: 5px;
+background: rgba(255,255,255,0.5);
+}
+
+.login-submit,
+button {
+border-radius: 2px;
+margin: 10px;
+padding: 5px;
+font-family: 'Staatliches', sans-serif;
+background-color: #d2d2d2;
+font-color: #0c542a;
+}
+.login-submit:hover {
+transition: background-color 1.5s ease;
+background-color: #9e0606;
+box-shadow: 2px 2px #666;
+transform: translateY(10px, 0.7s);
+} */
