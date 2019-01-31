@@ -14,14 +14,8 @@ import dead from './assets/you-died.mp3';
 import win from './assets/win.mp3';
 
 const init = {
-  levels: [],
   event: {},
   show: false,
-  users: [],
-  currentUser: {},
-  currentUserId: 0,
-  formCreates: 'create',
-  currentGame: {},
   error: ''
 }
 
@@ -45,8 +39,7 @@ class App extends Component {
       return
     }
     const event = levels[0]
-    const currentUserId = 0
-    this.setState({event, currentUserId})
+    this.setState({event})
   }
 
 
@@ -133,7 +126,7 @@ class App extends Component {
         transitionEnter={false}
         transitionLeave={true}
       transitionLeaveTimeout={1000}>
-      {this.state.show ? <EventsPrompt1 event={this.state.event} handleClick={this.handleClick}/> : <EventsPrompt2 event={this.state.event} handleClick={this.handleClick} currentUserId={this.state.currentUserId}/>}
+      {this.state.show ? <EventsPrompt1 event={this.state.event} handleClick={this.handleClick}/> : <EventsPrompt2 event={this.state.event} handleClick={this.handleClick}/>}
       </ReactCSSTransitionGroup>
       {this.error}
       <SaveLoad saveGame={this.saveGame} loadGame={this.loadGame} logOut={this.logOut}/>
