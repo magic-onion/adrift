@@ -34,7 +34,6 @@ class App extends Component {
   componentDidMount() {
     if (localStorage.getItem('save')) {
       let event = levels.find(level=> level.id === parseInt(localStorage.getItem('save')))
-      console.log(event)
       this.setState({event})
       return
     }
@@ -101,7 +100,6 @@ class App extends Component {
       }
     }
     else if (!localStorage.getItem('save')) {
-      console.log('error')
       let error = "No existing saved game."
       this.setState({error})
     }
