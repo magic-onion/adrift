@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "eb39656d6b50050ddcc5",
-    "url": "/adrift/static/css/main.f9c07f75.chunk.css"
+    "revision": "8438ccdfe2d1a05db484",
+    "url": "/adrift/static/css/main.f8ff794b.chunk.css"
   },
   {
-    "revision": "eb39656d6b50050ddcc5",
-    "url": "/adrift/static/js/main.eb39656d.chunk.js"
+    "revision": "8438ccdfe2d1a05db484",
+    "url": "/adrift/static/js/main.8438ccdf.chunk.js"
   },
   {
     "revision": "e29b121a5e8fc5ecb90b",
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/adrift/static/media/win.2a168d24.mp3"
   },
   {
-    "revision": "92f702c2d5df2293267dac5173537cd2",
+    "revision": "7b16788b6c268789a50919db9f04b555",
     "url": "/adrift/index.html"
   }
 ];

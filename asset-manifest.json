@@ -1,7 +1,7 @@
 {
-  "main.css": "/adrift/static/css/main.f9c07f75.chunk.css",
-  "main.js": "/adrift/static/js/main.eb39656d.chunk.js",
-  "main.js.map": "/adrift/static/js/main.eb39656d.chunk.js.map",
+  "main.css": "/adrift/static/css/main.f8ff794b.chunk.css",
+  "main.js": "/adrift/static/js/main.8438ccdf.chunk.js",
+  "main.js.map": "/adrift/static/js/main.8438ccdf.chunk.js.map",
   "static/js/1.e29b121a.chunk.js": "/adrift/static/js/1.e29b121a.chunk.js",
   "static/js/1.e29b121a.chunk.js.map": "/adrift/static/js/1.e29b121a.chunk.js.map",
   "runtime~main.js": "/adrift/static/js/runtime~main.64e2674b.js",
@@ -11,8 +11,8 @@
   "static/media/monster-growl.mp3": "/adrift/static/media/monster-growl.08af26fb.mp3",
   "static/media/you-died.mp3": "/adrift/static/media/you-died.753ea6cb.mp3",
   "static/media/win.mp3": "/adrift/static/media/win.2a168d24.mp3",
-  "static/css/main.f9c07f75.chunk.css.map": "/adrift/static/css/main.f9c07f75.chunk.css.map",
+  "static/css/main.f8ff794b.chunk.css.map": "/adrift/static/css/main.f8ff794b.chunk.css.map",
   "index.html": "/adrift/index.html",
-  "precache-manifest.d1631ba89361baa2fb06c4a10f8364d1.js": "/adrift/precache-manifest.d1631ba89361baa2fb06c4a10f8364d1.js",
+  "precache-manifest.7af9c15871466ab9f27ebb321b5e1e2d.js": "/adrift/precache-manifest.7af9c15871466ab9f27ebb321b5e1e2d.js",
   "service-worker.js": "/adrift/service-worker.js"
 }
