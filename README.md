@@ -4,4 +4,4 @@ In this game, you can choose one option to progress to the next event. If you fe
 
 At the moment, the game works best on a full screen browser. Working on optimizing layout for mobile.
 
-you can try the game out at http://magic-onion.github.io/adrift
+you can try the game out at https://magic-onion.github.io/adrift
