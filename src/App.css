@@ -154,12 +154,13 @@ button {
 
 .error-log {
   font-family: 'Karla', sans-serif;
+  position: relative;
   float: left;
   text-align: center;
   border-radius: 2px;
   padding: 30px;
   display: inline-block;
-  margin-left: 45.3em;
+  margin-left: 630px;
   margin-top: 200px;
   border: 4px groove #52110d;
   background-color: #5e9bb9;
