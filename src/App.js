@@ -118,6 +118,7 @@ class App extends Component {
 
   render() {
     return (
+      <>
       <div className="App ui centered divided grid">
       <ReactCSSTransitionGroup
         transitionName="example"
@@ -128,9 +129,10 @@ class App extends Component {
       transitionLeaveTimeout={1000}>
       {this.state.show ? <EventsPrompt1 event={this.state.event} handleClick={this.handleClick}/> : <EventsPrompt2 event={this.state.event} handleClick={this.handleClick}/>}
       </ReactCSSTransitionGroup>
-      {this.error}
       <SaveLoad saveGame={this.saveGame} loadGame={this.loadGame} logOut={this.logOut}/>
       </div>
+      {this.error}
+      </>
     )
   }
 }
